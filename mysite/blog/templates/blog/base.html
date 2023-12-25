@@ -2,26 +2,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            footer {
-                 text-align: center;
-                 padding: 3px;
-                 background-color: darksalmon;
-                 color: white;
-            }
-        </style>
         <title>{% block title %} {% endblock %}</title>
-        <link href="{% static " css/blog.css "%}" rel = "stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <!---- <link href="{% static " css/blog.css "%}" rel = "stylesheet"> -->
     </head>
 
 <body>
-    <div id="content">
+    <div class="w3-sidebar w3-light-grey w3-bar-block"  id="sidebar" style="width: 15%; background-color: bisque;">
+        <p> Author: Sudharsan Annamalai</p>
+        <p><a href="mailto:sudharshanvas@gmail.com">Email</a></p>
+    </div>
+    <div id="content" style="margin-left: 18%;">
         {% block content %}
         {% endblock %}
     </div>
-    <footer>
-        <p> Author: Sudharsan Annamalai</p>
-        <p><a href="mailto:sudharshanvas@gmail.com">Email</a></p>
-    </footer>
+    
 </body>
 </html>

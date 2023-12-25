@@ -7,10 +7,12 @@
     <h2>
         {{ post.title }}
     </h2>
-    <p class="date">
+    <p class="date" style="font-style: italic; font-family:-apple-system; text-decoration: underline;">
         Published {{ post.publish }} by {{ post.author }}
     </p>
-    <p>
-        {{post.body}}
+    {% for line in body %}
+    <p style="font-style:oblique; font-family:Gill Sans;">
+        {{line}}
     </p>
+    {% endfor %}
 {% endblock %}

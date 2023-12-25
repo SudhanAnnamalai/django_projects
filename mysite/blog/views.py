@@ -8,4 +8,4 @@ def post_list(request):
 
 def post_detail(request, id):
     post = get_object_or_404(Post, id=id)
-    return render(request, 'blog/post/detail.html', {'post': post})
+    return render(request, 'blog/post/detail.html', {'post': post, 'body':post.body.split("\n")})
